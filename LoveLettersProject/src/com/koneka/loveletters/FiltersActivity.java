@@ -25,13 +25,8 @@ public class FiltersActivity extends Activity {
 		Bundle b = getIntent().getBundleExtra("jsonBundle");
 		
 		final String jsonString = b.getString("jsonString");
-		final JSONObject filtersParams = new JSONObject();
-		Log.d("test", jsonString);
-		
-		
-		// ADD VALUES FROM UI TO JSON HERE
 
-		// ADD BUNDLE AND START NEW INTENT
+		Log.d("test", jsonString);
 		
 		button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -42,11 +37,12 @@ public class FiltersActivity extends Activity {
 				{
 					JSONObject json = new JSONObject(jsonString);
 					
-					filtersParams.put("girlType", girlType.getSelectedItem().toString() );
-					filtersParams.put("firstDate", firstDate.getSelectedItem().toString() );
+					JSONObject filters = (JSONObject) json.get("filters");
 					
-					json.put("filterParams", filtersParams);
-					
+					filters.put("DocumentType", "Date");
+					filters.put("GirlType", girlType.getSelectedItem().toString() );
+					filters.put("FirstDate", firstDate.getSelectedItem().toString() );
+										
 					Bundle b2 = new Bundle();
 					b2.putString("jsonString", json.toString());
 					

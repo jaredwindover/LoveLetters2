@@ -1,15 +1,16 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-	    xmlns:tools="http://schemas.android.com/tools"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent" >
-    	<RelativeLayout 
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:paddingBottom="@dimen/activity_vertical_margin"
-		    android:paddingLeft="@dimen/activity_horizontal_margin"
-		    android:paddingRight="@dimen/activity_horizontal_margin"
-		    android:paddingTop="@dimen/activity_vertical_margin"
-		    tools:context=".MainActivity" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    	<RelativeLayout
+    	    android:layout_width="match_parent"
+    	    android:layout_height="fill_parent"
+    	    android:paddingBottom="@dimen/activity_vertical_margin"
+    	    android:paddingLeft="@dimen/activity_horizontal_margin"
+    	    android:paddingRight="@dimen/activity_horizontal_margin"
+    	    android:paddingTop="@dimen/activity_vertical_margin"
+    	    tools:context=".MainActivity" >
 	
 	    <TextView
 	        android:id="@+id/userFirstNameText"
@@ -83,31 +84,15 @@
 	        android:layout_below="@+id/userEmailText"
 	        android:ems="10"
 	        android:inputType="textEmailAddress" />
-	
-	    <TextView
-	        android:id="@+id/userBirthdayText"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/userEmail"
-	        android:layout_below="@+id/userEmail"
-	        android:text="@string/birthday" />
-	
-	    <EditText
-	        android:id="@+id/userBirthday"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/userBirthdayText"
-	        android:layout_below="@+id/userBirthdayText"
-	        android:ems="10"
-	        android:inputType="date" />
-	
+
 	    <Button
 	        android:id="@+id/continueButton"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignParentBottom="true"
-	        android:layout_centerHorizontal="true"
-	        android:layout_marginBottom="41dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/userEmail"
+	        android:layout_marginRight="38dp"
+	        android:layout_marginTop="76dp"
 	        android:text="@string/nextButton" />
 	
 	</RelativeLayout>

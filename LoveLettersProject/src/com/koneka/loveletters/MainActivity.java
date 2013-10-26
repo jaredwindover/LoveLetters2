@@ -20,7 +20,15 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 		
 		final JSONObject json = new JSONObject();
-		final JSONObject userProfile = new JSONObject();
+		final JSONObject fields = new JSONObject();
+		final JSONObject filters = new JSONObject();
+		
+		try
+		{
+			json.put("fields", fields);
+			json.put("filters", filters);
+		}
+		catch(Exception e){}
 		
 		final Button button = (Button) findViewById(R.id.continueButton);
 		
@@ -34,29 +42,21 @@ public class MainActivity extends Activity {
 				TextView lastName = (TextView) findViewById(R.id.userLastName);
 				TextView phone = (TextView) findViewById(R.id.userPhone);
 				TextView email = (TextView) findViewById(R.id.userEmail);
-				TextView birthday = (TextView) findViewById(R.id.userBirthday);
 				
-				try{
-					userProfile.put("firstName", firstName.getText());
-					userProfile.put("lastName", lastName.getText());
-					userProfile.put("phone", phone.getText());
-					userProfile.put("email", email.getText());
-					userProfile.put("birthday", birthday.getText());
-					
-					json.put("userProfile", userProfile);
-					
-					Bundle b = new Bundle();
-					b.putString("jsonString", json.toString());
-					
-					intent.putExtra("jsonBundle", b);
-					Log.d("test", json.toString());
-					startActivity(intent);
-					
-				}
-				catch(Exception e)
+				try
 				{
-					
+					fields.put("userFirstName", firstName.getText());
+					fields.put("userLastName", lastName.getText());
+					fields.put("userPhone", phone.getText());
+					fields.put("userEmail", email.getText());
 				}
+				catch(Exception e){}
+									
+				Bundle b = new Bundle();
+				b.putString("jsonString", json.toString());
+				
+				intent.putExtra("jsonBundle", b);
+				Log.d("test", json.toString());
 			}
 		});
 		
