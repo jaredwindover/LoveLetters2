@@ -16,7 +16,7 @@ public class ConfirmActivity extends Activity {
 		setContentView(R.layout.activity_confim);
 		
 		final Intent intent = new Intent(this, MainActivity.class);
-		final Button button = (Button) findViewById(R.id.filterNextBtn);
+		final Button button = (Button) findViewById(R.id.sendButton);
 		
 		final Bundle b = getIntent().getBundleExtra("jsonBundle");
 		final String jsonString = b.getString("jsonString");
