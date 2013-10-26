@@ -31,7 +31,7 @@
             android:label="@string/title_activity_filters" >
         </activity>
         <activity
-            android:name="com.koneka.loveletters.ConfimActivity"
+            android:name="com.koneka.loveletters.ConfirmActivity"
             android:label="@string/title_activity_confim" >
         </activity>
     </application>
