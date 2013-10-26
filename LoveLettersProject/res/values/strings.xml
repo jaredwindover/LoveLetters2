@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Love Letters</string>
+    <string name="action_settings">Settings</string>
+    <string name="firstName">First Name:</string>
+    <string name="lastName">Last Name:</string>
+    <string name="email">Email:</string>
+    <string name="phone">Phone:</string>
+    <string name="birthday">Birthday:</string>
+    <string name="nextButton">Next</string>
+    
+	<!-- Filter Activity Strings -->
+    <string name="filter_view">Filter View</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="restaurant">Restaurant:</string>
+    <string name="park">Park:</string>
+    <string name="theater">Theater:</string>
+    <string name="location">Location:</string>
+    <string name="time">Time:</string>
+    <string name="build_message">Build Message</string>
+    <string name="filters">Filters</string>
+
+    <string-array name="GirlType">
+        <item>Blonde</item>
+        <item>Brunette</item>
+        <item>Asian</item>
+        <item>Indian</item>
+    </string-array>
+    <string-array name="FirstDate">
+        <item>Romantic Restaurant</item>
+        <item>Walk Around the Park</item>
+        <item>Clubbing</item>
+    </string-array>
+
+    <string name="GirlTypeString">Girl Type</string>
+    <string name="FirstDateString">First Date</string>
+    <string name="title_activity_filters">Filters</string>
+    <string name="NextString">Next</string>
+
+</resources>
