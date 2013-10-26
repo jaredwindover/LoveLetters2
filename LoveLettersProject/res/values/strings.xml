@@ -10,7 +10,8 @@
     <string name="birthday">Birthday:</string>
     <string name="nextButton">Next</string>
     
-	<!-- Filter Activity Strings -->
+	<!-- Fields Activity Strings -->
+	<string name="title_activity_fields">Fields</string>
     <string name="filter_view">Filter View</string>
     <string name="first_name">First Name:</string>
     <string name="last_name">Last Name:</string>
@@ -20,7 +21,7 @@
     <string name="location">Location:</string>
     <string name="time">Time:</string>
     <string name="build_message">Build Message</string>
-    <string name="filters">Filters</string>
+    <string name="fields">Fields</string>
 
     <string-array name="GirlType">
         <item>Blonde</item>

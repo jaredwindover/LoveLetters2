@@ -2,6 +2,7 @@ package com.koneka.loveletters;
 
 import org.json.JSONObject;
 
+import com.koneka.loveletters.*;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -23,9 +24,12 @@ public class MainActivity extends Activity {
 		
 		final Button button = (Button) findViewById(R.id.continueButton);
 		
+		final Intent intent = new Intent(this, FiltersActivity.class);
+		
 		button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				
+
 				TextView firstName = (TextView) findViewById(R.id.userFirstName);
 				TextView lastName = (TextView) findViewById(R.id.userLastName);
 				TextView phone = (TextView) findViewById(R.id.userPhone);
@@ -44,6 +48,7 @@ public class MainActivity extends Activity {
 					Bundle b = new Bundle();
 					b.putString("json", json.toString());
 					
+					startActivity(intent);
 				}
 				catch(Exception e)
 				{
@@ -53,7 +58,7 @@ public class MainActivity extends Activity {
 		});
 		
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
