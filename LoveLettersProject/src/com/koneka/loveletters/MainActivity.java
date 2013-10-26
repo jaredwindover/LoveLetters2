@@ -48,7 +48,10 @@ public class MainActivity extends Activity {
 					Bundle b = new Bundle();
 					b.putString("json", json.toString());
 					
+					intent.putExtra("jsonBundle", b);
+					
 					startActivity(intent);
+					
 				}
 				catch(Exception e)
 				{

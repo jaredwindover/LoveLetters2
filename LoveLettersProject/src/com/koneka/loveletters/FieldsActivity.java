@@ -1,5 +1,7 @@
 package com.koneka.loveletters;
 
+import org.json.JSONObject;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
@@ -10,6 +12,19 @@ public class FieldsActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fields);
+		
+		Bundle b = getIntent().getBundleExtra("jsonBundle");
+		String jsonString = b.getString("jsonString");
+		
+		try
+		{
+		JSONObject json = new JSONObject(jsonString);
+		}
+		catch(Exception e){}
+		
+		// ADD VALUES FROM UI TO JSON HERE
+
+		// ADD BUNDLE AND START NEW INTENT
 	}
 
 	@Override
