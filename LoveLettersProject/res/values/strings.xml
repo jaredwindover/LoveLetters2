@@ -9,9 +9,9 @@
     <string name="phone">Phone:</string>
     <string name="birthday">Birthday:</string>
     <string name="nextButton">Next</string>
-    
-	<!-- Fields Activity Strings -->
-	<string name="title_activity_fields">Fields</string>
+
+    <!-- Fields Activity Strings -->
+    <string name="title_activity_fields">Fields</string>
     <string name="filter_view">Filter View</string>
     <string name="first_name">First Name:</string>
     <string name="last_name">Last Name:</string>
@@ -23,6 +23,10 @@
     <string name="build_message">Build Message</string>
     <string name="fields">Fields</string>
 
+     <!-- Confirm Activity Strings -->
+    <string name="confirm_send">Confirm Message Build?</string>
+    <string name="send_message">Send</string>
+    
     <string-array name="GirlType">
         <item>Blonde</item>
         <item>Brunette</item>
@@ -39,5 +43,7 @@
     <string name="FirstDateString">First Date</string>
     <string name="title_activity_filters">Filters</string>
     <string name="NextString">Next</string>
+    <string name="title_activity_confim">ConfimActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

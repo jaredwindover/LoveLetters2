@@ -21,7 +21,7 @@
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	
 	    <EditText
-	        android:id="@+id/editText1"
+	        android:id="@+id/firstText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignBaseline="@+id/textView1"
@@ -29,27 +29,29 @@
 	        android:layout_marginLeft="19dp"
 	        android:layout_toRightOf="@+id/textView1"
 	        android:ems="10"
-	        android:inputType="textPersonName" />
+	        android:inputType="textPersonName" >
+
+	        <requestFocus />
+
+	    </EditText>
 	
 	    <EditText
-	        android:id="@+id/editText2"
+	        android:id="@+id/lastText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/editText1"
-	        android:layout_below="@+id/editText1"
+	        android:layout_alignLeft="@+id/firstText"
+	        android:layout_below="@+id/firstText"
 	        android:layout_marginTop="22dp"
 	        android:ems="10"
 	        android:inputType="textPersonName" >
-	
-	        <requestFocus />
 	    </EditText>
 	
 	    <TextView
 	        android:id="@+id/TextView01"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/editText2"
-	        android:layout_alignBottom="@+id/editText2"
+	        android:layout_alignBaseline="@+id/lastText"
+	        android:layout_alignBottom="@+id/lastText"
 	        android:layout_alignLeft="@+id/textView1"
 	        android:text="@string/last_name"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -58,9 +60,9 @@
 	        android:id="@+id/TextView02"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/editText2"
+	        android:layout_below="@+id/lastText"
 	        android:layout_marginTop="26dp"
-	        android:layout_toLeftOf="@+id/editText1"
+	        android:layout_toLeftOf="@+id/firstText"
 	        android:text="@string/restaurant"
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	
@@ -105,21 +107,21 @@
 	        android:textAppearance="?android:attr/textAppearanceMedium" />
 	
 	    <EditText
-	        android:id="@+id/editText7"
+	        android:id="@+id/locationText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignBaseline="@+id/TextView06"
 	        android:layout_alignBottom="@+id/TextView06"
-	        android:layout_alignLeft="@+id/editText6"
+	        android:layout_alignLeft="@+id/theaterText"
 	        android:ems="10"
 	        android:inputType="text" />
 	
 	    <EditText
-	        android:id="@+id/editText3"
+	        android:id="@+id/timeText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/editText7"
-	        android:layout_alignLeft="@+id/editText7"
+	        android:layout_above="@+id/locationText"
+	        android:layout_alignLeft="@+id/locationText"
 	        android:ems="10"
 	        android:inputType="time" />
 	
@@ -127,35 +129,37 @@
 	        android:id="@+id/filterNextBtn"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignRight="@+id/editText7"
-	        android:layout_below="@+id/editText7"
+	        android:layout_alignRight="@+id/locationText"
+	        android:layout_below="@+id/locationText"
 	        android:layout_marginTop="35dp"
 	        android:text="@string/build_message" />
 	
 	    <EditText
-	        android:id="@+id/editText5"
+	        android:id="@+id/parkText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_above="@+id/TextView04"
-	        android:layout_alignLeft="@+id/editText2"
+	        android:layout_alignLeft="@+id/lastText"
 	        android:ems="10"
 	        android:inputType="text" />
 	
 	    <EditText
-	        android:id="@+id/editText6"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/TextView05"
-	        android:layout_alignLeft="@+id/editText5"
-	        android:ems="10"
-	        android:inputType="text" />
-	
-	    <EditText
-	        android:id="@+id/editText4"
+	        android:id="@+id/restaurantText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignBottom="@+id/TextView02"
-	        android:layout_alignLeft="@+id/editText2"
+	        android:layout_alignLeft="@+id/lastText"
+	        android:ems="10"
+	        android:inputType="text" />
+
+	    <EditText
+	        android:id="@+id/theaterText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView04"
+	        android:layout_alignBottom="@+id/TextView04"
+	        android:layout_alignLeft="@+id/parkText"
+	        android:layout_alignRight="@+id/parkText"
 	        android:ems="10"
 	        android:inputType="text" />
 	
