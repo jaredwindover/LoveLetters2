@@ -45,5 +45,9 @@
     <string name="NextString">Next</string>
     <string name="title_activity_confim">ConfimActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="time_previous">Last Time</string>
+    <string name="time_next">Next Time</string>
+    <string name="location_last">Last Place</string>
+    <string name="location_next">Next Place</string>
 
 </resources>
