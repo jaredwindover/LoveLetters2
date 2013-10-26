@@ -4,6 +4,7 @@ import org.json.JSONObject;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 
 public class FieldsActivity extends Activity {
@@ -15,13 +16,14 @@ public class FieldsActivity extends Activity {
 		
 		Bundle b = getIntent().getBundleExtra("jsonBundle");
 		String jsonString = b.getString("jsonString");
-		
+		Log.d("test", jsonString);
+		/*
 		try
 		{
 		JSONObject json = new JSONObject(jsonString);
 		}
 		catch(Exception e){}
-		
+		*/
 		// ADD VALUES FROM UI TO JSON HERE
 
 		// ADD BUNDLE AND START NEW INTENT

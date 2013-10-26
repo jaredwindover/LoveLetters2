@@ -46,10 +46,10 @@ public class MainActivity extends Activity {
 					json.put("userProfile", userProfile);
 					
 					Bundle b = new Bundle();
-					b.putString("json", json.toString());
+					b.putString("jsonString", json.toString());
 					
 					intent.putExtra("jsonBundle", b);
-					
+					Log.d("test", json.toString());
 					startActivity(intent);
 					
 				}
