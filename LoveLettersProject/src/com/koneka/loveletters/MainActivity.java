@@ -57,6 +57,7 @@ public class MainActivity extends Activity {
 				
 				intent.putExtra("jsonBundle", b);
 				Log.d("test", json.toString());
+				startActivity(intent);
 			}
 		});
 		
