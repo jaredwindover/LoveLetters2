@@ -19,18 +19,14 @@ public class FieldsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fields);
 		
-		final Intent intent = new Intent(this, FieldsActivity.class);
+		final Intent intent = new Intent(this, ConfirmActivity.class);
 		final Button button = (Button) findViewById(R.id.filterNextBtn);
 			
 		Bundle b = getIntent().getBundleExtra("jsonBundle");
 		
 		final String jsonString = b.getString("jsonString");
-		final JSONObject fieldParams = new JSONObject();
-		Log.d("test-fields", jsonString);
-		
-		// ADD VALUES FROM UI TO JSON HERE
 
-		// ADD BUNDLE AND START NEW INTENT
+		Log.d("test-fields", jsonString);
 		
 		button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -42,20 +38,21 @@ public class FieldsActivity extends Activity {
 				EditText theater = (EditText) findViewById(R.id.theaterText);
 				EditText time = (EditText) findViewById(R.id.timeText);
 				EditText location = (EditText) findViewById(R.id.locationText);
+				
 				try
 				{
 					JSONObject json = new JSONObject(jsonString);
 					
-					fieldParams.put("FIRSTNAME", firstName.getText() );
-					fieldParams.put("LASTNAME", lastName.getText() );
-					fieldParams.put("RESTAURANTNAME", rest.getText() );
-					fieldParams.put("PARKNAME", park.getText() );
-					fieldParams.put("THEATERNAME", theater.getText() );
-					fieldParams.put("TIME", time.getText() );
-					fieldParams.put("LOCATION", location.getText() );
-				
-					json.put("fields", fieldParams);
+					JSONObject fields = (JSONObject) json.get("fields");
 					
+					fields.put("FIRSTNAME", firstName.getText() );
+					fields.put("LASTNAME", lastName.getText() );
+					fields.put("RESTAURANTNAME", rest.getText() );
+					fields.put("PARKNAME", park.getText() );
+					fields.put("THEATERNAME", theater.getText() );
+					fields.put("TIME", time.getText() );
+					fields.put("LOCATION", location.getText() );
+									
 					Bundle b2 = new Bundle();
 					b2.putString("jsonString", json.toString());
 					
