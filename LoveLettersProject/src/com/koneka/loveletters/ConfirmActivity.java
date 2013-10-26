@@ -37,7 +37,11 @@ public class ConfirmActivity extends Activity {
 			public void onClick(View v) {
 				try {
 				intent.putExtra("jsonBundle", b);
+				StringEntity se = new StringEntity(jsonString);
 				
+				httprequest task = new httprequest(this);
+				task.execute("http://namedomain/test.php", se);
+				/*
 				DefaultHttpClient httpclient = new DefaultHttpClient();
 				 
 				HttpPost httpost = new HttpPost("http://dating.smartproposition.com");
@@ -51,7 +55,7 @@ public class ConfirmActivity extends Activity {
 
 			    BasicResponseHandler responseHandler = new BasicResponseHandler();
 			    httpclient.execute(httpost, responseHandler);
-				
+				*/
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -68,7 +72,8 @@ public class ConfirmActivity extends Activity {
 			}
 		});		
 	}
-
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -77,3 +82,5 @@ public class ConfirmActivity extends Activity {
 	}
 
 }
+
+
