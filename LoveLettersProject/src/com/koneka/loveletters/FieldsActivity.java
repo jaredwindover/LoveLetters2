@@ -33,11 +33,10 @@ public class FieldsActivity extends Activity {
 				
 				EditText firstName = (EditText) findViewById(R.id.firstText);
 				EditText lastName = (EditText) findViewById(R.id.lastText);
-				EditText rest = (EditText) findViewById(R.id.restaurantText);
-				EditText park = (EditText) findViewById(R.id.parkText);
-				EditText theater = (EditText) findViewById(R.id.theaterText);
-				EditText time = (EditText) findViewById(R.id.timeText);
-				EditText location = (EditText) findViewById(R.id.locationText);
+				EditText locationPrevious = (EditText) findViewById(R.id.locationPrevious);
+				EditText timePrevious = (EditText) findViewById(R.id.timePrevious);
+				EditText locationNext = (EditText) findViewById(R.id.locationNext);
+				EditText timeNext = (EditText) findViewById(R.id.timeNext);
 				
 				try
 				{
@@ -47,11 +46,10 @@ public class FieldsActivity extends Activity {
 					
 					fields.put("FIRSTNAME", firstName.getText() );
 					fields.put("LASTNAME", lastName.getText() );
-					fields.put("RESTAURANTNAME", rest.getText() );
-					fields.put("PARKNAME", park.getText() );
-					fields.put("THEATERNAME", theater.getText() );
-					fields.put("TIME", time.getText() );
-					fields.put("LOCATION", location.getText() );
+					fields.put("LOCATION_PREVIOUS", locationPrevious.getText() );
+					fields.put("TIME_PREVIOUS", timePrevious.getText() );
+					fields.put("LOCATION_NEXT", locationNext.getText() );
+					fields.put("TIME_NEXT", timeNext.getText() );
 									
 					Bundle b2 = new Bundle();
 					b2.putString("jsonString", json.toString());
