@@ -26,7 +26,10 @@
             android:name="com.koneka.loveletters.FiltersActivity"
             android:label="@string/title_activity_filters" >
         </activity>
-        
+        <activity
+            android:name="com.koneka.loveletters.FieldsActivity"
+            android:label="@string/title_activity_filters" >
+        </activity>
     </application>
 
 </manifest>

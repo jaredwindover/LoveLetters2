@@ -38,7 +38,7 @@
         android:entries="@array/FirstDate" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/filterNextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
