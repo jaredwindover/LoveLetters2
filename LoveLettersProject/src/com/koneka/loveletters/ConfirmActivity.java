@@ -2,13 +2,20 @@ package com.koneka.loveletters;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -35,27 +42,22 @@ public class ConfirmActivity extends Activity {
 		
 		button.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-				try {
-				intent.putExtra("jsonBundle", b);
-				StringEntity se = new StringEntity(jsonString);
-				
-				httprequest task = new httprequest(this);
-				task.execute("http://namedomain/test.php", se);
 				/*
-				DefaultHttpClient httpclient = new DefaultHttpClient();
-				 
-				HttpPost httpost = new HttpPost("http://dating.smartproposition.com");
+				try {
 
-			    StringEntity se = new StringEntity(jsonString);
-		
-			    httpost.setEntity(se);
+				HttpPost httppost = new HttpPost("http://dating.smartproposition.com");
+				
+				List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);
+		        nameValuePairs.add(new BasicNameValuePair("payload", jsonString));
+		        UrlEncodedFormEntity se = new UrlEncodedFormEntity(nameValuePairs);
+				//
+				httprequest task = new httprequest();
+				task.execute("http://namedomain/test.php", se);
+				//
 
-			    httpost.setHeader("Accept", "application/json");
-			    httpost.setHeader("Content-type", "application/json");
-
-			    BasicResponseHandler responseHandler = new BasicResponseHandler();
-			    httpclient.execute(httpost, responseHandler);
-				*/
+			    //httpost.setHeader("Accept", "application/json");
+			    //httpost.setHeader("Content-type", "application/json");			
+				
 				} catch (UnsupportedEncodingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -67,6 +69,8 @@ public class ConfirmActivity extends Activity {
 					e.printStackTrace();
 				}
 				//CLOSE ACTIVITIES AND FINISH
+				  */
+				 
 				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
 			}

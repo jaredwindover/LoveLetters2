@@ -17,10 +17,9 @@ public class httprequest extends AsyncTask<String, Integer, HttpResponse> {
     private Context context;
     private String message;
 
-    public httprequest (Context context, String message) 
+    public httprequest (Context context) 
     {
         this.context = context;     
-        this.message = message;
     }
 
     @Override
@@ -31,7 +30,7 @@ public class httprequest extends AsyncTask<String, Integer, HttpResponse> {
         try {
             HttpClient client = new DefaultHttpClient();
             response = client.execute(httppost);
-            httpost.setEntity(params[1]);
+            //httppost.setEntity(params[1]);
 
         } catch (ClientProtocolException e) {
             Toast.makeText(this.context, "Caught ClientProtocolException", Toast.LENGTH_SHORT).show();
