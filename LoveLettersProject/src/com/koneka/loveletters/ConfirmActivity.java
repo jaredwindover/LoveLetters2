@@ -46,6 +46,18 @@ public class ConfirmActivity extends Activity {
 				try {
 
 				HttpPost httppost = new HttpPost("http://dating.smartproposition.com");
+				intent.putExtra("jsonBundle", b);
+				
+				HttpClient httpclient = new DefaultHttpClient();
+				HttpPost httppost = new HttpPost("http://dating.smartproposition.com");
+		
+			    List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);
+		        nameValuePairs.add(new BasicNameValuePair("payload", jsonString));
+		        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+
+		        // Execute HTTP Post Request
+		        HttpResponse response = httpclient.execute(httppost);
+					
 				
 				List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(1);
 		        nameValuePairs.add(new BasicNameValuePair("payload", jsonString));
